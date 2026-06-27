@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      
+      .bg { fill: #030712; }
+      .border { stroke: #00F0FF; stroke-width: 1.5; fill: none; opacity: 0.7; filter: drop-shadow(0 0 4px #00F0FF); }
+      .text-title { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 22px; fill: #FFFFFF; letter-spacing: 2px; }
+      .text-sub { font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8B949E; }
+      .text-term { font-family: 'JetBrains Mono', monospace; font-size: 14px; fill: #00F0FF; }
+      .text-green { fill: #39FF14; filter: drop-shadow(0 0 2px #39FF14); }
+      .text-white { fill: #F0F6FC; }
+      
+      .cursor {
+        animation: blink 0.9s infinite;
+        fill: #00F0FF;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; }
+      }
+      
+      .typing-1 {
+        opacity: 0;
+        animation: typeIn 0.1s steps(1) 0.5s forwards;
+      }
+      .typing-2 {
+        opacity: 0;
+        animation: typeIn 0.1s steps(1) 1.5s forwards;
+      }
+      .typing-3 {
+        opacity: 0;
+        animation: typeIn 0.1s steps(1) 2.5s forwards;
+      }
+      .typing-4 {
+        opacity: 0;
+        animation: typeIn 0.1s steps(1) 3.5s forwards;
+      }
+      
+      @keyframes typeIn {
+        to { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <rect width="800" height="200" rx="10" class="bg"/>
+  <rect x="5" y="5" width="790" height="190" rx="8" class="border"/>
+  
+  <!-- Top decorative technical border lines -->
+  <line x1="20" y1="20" x2="120" y2="20" stroke="#00F0FF" stroke-width="3" opacity="0.8"/>
+  <line x1="780" y1="20" x2="680" y2="20" stroke="#00F0FF" stroke-width="3" opacity="0.8"/>
+  
+  <!-- Branding Titles -->
+  <text x="35" y="50" class="text-title">TIRUNARA // DEV_SPACE</text>
+  <text x="35" y="72" class="text-sub">Host: PC-01 // Arch: x86_64 // OS: Linux</text>
+  
+  <!-- Terminal Prompt Group -->
+  <g transform="translate(35, 105)">
+    <!-- Line 1 -->
+    <text x="0" y="0" class="text-term">shiva@dev:~$ <tspan class="text-white">cat focus.json</tspan></text>
+    
+    <!-- Line 2 -->
+    <text x="0" y="22" class="text-term typing-1">> <tspan class="text-white">["Low-Level Systems", "GLSL Shaders", "Agent Frameworks"]</tspan></text>
+    
+    <!-- Line 3 -->
+    <text x="0" y="44" class="text-term typing-2">shiva@dev:~$ <tspan class="text-white">./agent_status</tspan></text>
+    
+    <!-- Line 4 -->
+    <text x="0" y="66" class="text-term typing-3">> Co-engineer <tspan class="text-green">Integrity</tspan> status: <tspan class="text-green">CONNECTED</tspan></text>
+    
+    <!-- Blinking Cursor -->
+    <rect x="420" y="52" width="8" height="15" class="cursor typing-4"/>
+  </g>
+</svg>

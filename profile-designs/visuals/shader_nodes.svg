@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&amp;family=JetBrains+Mono&amp;display=swap');
+      
+      .bg { fill: #030712; }
+      .border { stroke: rgba(0, 240, 255, 0.2); stroke-width: 1.5; fill: none; }
+      .node-bg { fill: #0b1329; stroke: #00F0FF; stroke-width: 1.5; filter: drop-shadow(0 0 2px rgba(0, 240, 255, 0.2)); }
+      .node-text { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700; fill: #FFFFFF; }
+      .node-subtext { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #8B949E; }
+      
+      .signal-line { fill: none; stroke: rgba(0, 240, 255, 0.15); stroke-width: 2; }
+      .signal-pulse { fill: none; stroke: #00F0FF; stroke-width: 2.5; stroke-dasharray: 20, 100; stroke-dashoffset: 0; animation: flow 3s linear infinite; filter: drop-shadow(0 0 3px #00F0FF); }
+      
+      @keyframes flow {
+        to { stroke-dashoffset: -120; }
+      }
+      
+      .glow-sphere { fill: url(#sphere-grad); filter: drop-shadow(0 0 10px #00F0FF) drop-shadow(0 0 20px #8A2BE2); animation: pulseSphere 4s ease-in-out infinite alternate; }
+      @keyframes pulseSphere {
+        0% { r: 35; }
+        100% { r: 42; }
+      }
+    </style>
+    
+    <radialGradient id="sphere-grad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="60%" stop-color="#8A2BE2" />
+      <stop offset="100%" stop-color="#050014" />
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="200" rx="10" class="bg"/>
+  <rect x="5" y="5" width="790" height="190" rx="8" class="border"/>
+  
+  <!-- Flow lines -->
+  <path d="M 160 70 L 320 70" class="signal-line"/>
+  <path d="M 160 70 L 320 70" class="signal-pulse"/>
+  
+  <path d="M 160 130 L 320 130" class="signal-line"/>
+  <path d="M 160 130 L 320 130" class="signal-pulse"/>
+  
+  <path d="M 440 100 L 620 100" class="signal-line"/>
+  <path d="M 440 100 L 620 100" class="signal-pulse"/>
+
+  <!-- Node 1: UV coordinates -->
+  <g transform="translate(40, 45)">
+    <rect width="120" height="50" rx="6" class="node-bg"/>
+    <text x="15" y="22" class="node-text">input_uv</text>
+    <text x="15" y="38" class="node-subtext">Vec2 (0.0, 1.0)</text>
+    <circle cx="120" cy="25" r="4" fill="#00F0FF"/>
+  </g>
+
+  <!-- Node 2: TIME value -->
+  <g transform="translate(40, 105)">
+    <rect width="120" height="50" rx="6" class="node-bg"/>
+    <text x="15" y="22" class="node-text">sys_time</text>
+    <text x="15" y="38" class="node-subtext">Float (elapsed)</text>
+    <circle cx="120" cy="25" r="4" fill="#00F0FF"/>
+  </g>
+
+  <!-- Node 3: Fragment calculation -->
+  <g transform="translate(320, 75)">
+    <rect width="120" height="50" rx="6" class="node-bg"/>
+    <text x="15" y="22" class="node-text">frag_program</text>
+    <text x="15" y="38" class="node-subtext">sin(UV.x * TIME)</text>
+    <circle cx="0" cy="25" r="4" fill="#00F0FF"/>
+    <circle cx="120" cy="25" r="4" fill="#00F0FF"/>
+  </g>
+
+  <!-- Glowing Output Screen representation -->
+  <circle cx="680" cy="100" r="38" class="glow-sphere"/>
+</svg>

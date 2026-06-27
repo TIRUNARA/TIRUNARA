@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&amp;family=JetBrains+Mono&amp;display=swap');
+      
+      .bg { fill: #030712; }
+      .border { stroke: rgba(57, 255, 20, 0.15); stroke-width: 1.5; fill: none; }
+      
+      .mesh-line { stroke: rgba(57, 255, 20, 0.15); stroke-width: 1.5; fill: none; }
+      
+      .node { fill: #020c06; stroke: #39FF14; stroke-width: 2; filter: drop-shadow(0 0 4px rgba(57, 255, 20, 0.4)); }
+      .node-text { font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+      .node-pulse { fill: none; stroke: #39FF14; stroke-width: 1; animation: radar 3s infinite linear; }
+      
+      @keyframes radar {
+        0% { r: 12; opacity: 1; }
+        100% { r: 35; opacity: 0; }
+      }
+      
+      .data-packet { fill: #39FF14; filter: drop-shadow(0 0 3px #39FF14); }
+    </style>
+    
+    <path id="path-a-b" d="M 150 100 Q 300 30 450 100"/>
+    <path id="path-b-c" d="M 450 100 L 650 140"/>
+    <path id="path-c-a" d="M 650 140 Q 400 170 150 100"/>
+  </defs>
+
+  <rect width="800" height="200" rx="10" class="bg"/>
+  <rect x="5" y="5" width="790" height="190" rx="8" class="border"/>
+  
+  <!-- Connection Paths -->
+  <use href="#path-a-b" class="mesh-line"/>
+  <use href="#path-b-c" class="mesh-line"/>
+  <use href="#path-c-a" class="mesh-line"/>
+  
+  <!-- Traversing Data Packets -->
+  <circle r="4" class="data-packet">
+    <animateMotion dur="3.5s" repeatCount="indefinite">
+      <mpath href="#path-a-b"/>
+    </animateMotion>
+  </circle>
+  
+  <circle r="4" class="data-packet">
+    <animateMotion dur="2.2s" repeatCount="indefinite">
+      <mpath href="#path-b-c"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="4" class="data-packet">
+    <animateMotion dur="4.5s" repeatCount="indefinite">
+      <mpath href="#path-c-a"/>
+    </animateMotion>
+  </circle>
+
+  <!-- Node A: Supervisor -->
+  <g transform="translate(150, 100)">
+    <circle r="25" class="node-pulse"/>
+    <circle r="12" class="node"/>
+    <text y="-20" class="node-text">supervisor_node</text>
+  </g>
+
+  <!-- Node B: Specialist -->
+  <g transform="translate(450, 100)">
+    <circle r="25" class="node-pulse" style="animation-delay: -1s;"/>
+    <circle r="12" class="node"/>
+    <text y="-20" class="node-text">specialist_node</text>
+  </g>
+
+  <!-- Node C: Compiler -->
+  <g transform="translate(650, 140)">
+    <circle r="25" class="node-pulse" style="animation-delay: -2s;"/>
+    <circle r="12" class="node"/>
+    <text y="-20" class="node-text">compiler_agent</text>
+  </g>
+</svg>

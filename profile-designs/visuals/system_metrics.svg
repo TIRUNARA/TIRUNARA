@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      
+      .bg { fill: #030712; }
+      .border { stroke: rgba(0, 240, 255, 0.2); stroke-width: 1.5; fill: none; }
+      .bar-track { fill: #0b1329; stroke: rgba(0, 240, 255, 0.1); stroke-width: 1; }
+      .bar-fill { fill: #00F0FF; filter: drop-shadow(0 0 3px #00F0FF); }
+      
+      .text-title { font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700; fill: #FFFFFF; }
+      .text-percent { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; fill: #00F0FF; }
+      
+      .fill-py { animation: loadPy 2.5s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+      .fill-cpp { animation: loadCpp 2.5s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+      .fill-gd { animation: loadGd 2.5s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+      
+      @keyframes loadPy {
+        from { width: 0px; }
+        to { width: 460px; } /* 92% of 500px */
+      }
+      @keyframes loadCpp {
+        from { width: 0px; }
+        to { width: 425px; } /* 85% of 500px */
+      }
+      @keyframes loadGd {
+        from { width: 0px; }
+        to { width: 450px; } /* 90% of 500px */
+      }
+      
+      .blink-dot { fill: #39FF14; filter: drop-shadow(0 0 2px #39FF14); animation: flash 1.5s infinite alternate; }
+      @keyframes flash {
+        from { opacity: 0.3; }
+        to { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <rect width="800" height="200" rx="10" class="bg"/>
+  <rect x="5" y="5" width="790" height="190" rx="8" class="border"/>
+
+  <!-- Row 1: Python -->
+  <g transform="translate(40, 35)">
+    <circle cx="0" cy="15" r="4" class="blink-dot"/>
+    <text x="15" y="20" class="text-title">PYTHON // SWARM CORE</text>
+    <rect x="200" y="8" width="500" height="14" rx="4" class="bar-track"/>
+    <rect x="200" y="8" width="0" height="14" rx="4" class="bar-fill fill-py"/>
+    <text x="715" y="20" class="text-percent">92%</text>
+  </g>
+
+  <!-- Row 2: C++ -->
+  <g transform="translate(40, 85)">
+    <circle cx="0" cy="15" r="4" class="blink-dot" style="animation-delay: -0.5s;"/>
+    <text x="15" y="20" class="text-title">C++ // LOW LEVEL</text>
+    <rect x="200" y="8" width="500" height="14" rx="4" class="bar-track"/>
+    <rect x="200" y="8" width="0" height="14" rx="4" class="bar-fill fill-cpp"/>
+    <text x="715" y="20" class="text-percent">85%</text>
+  </g>
+
+  <!-- Row 3: GDScript / GLSL -->
+  <g transform="translate(40, 135)">
+    <circle cx="0" cy="15" r="4" class="blink-dot" style="animation-delay: -1s;"/>
+    <text x="15" y="20" class="text-title">GDSCRIPT / GLSL</text>
+    <rect x="200" y="8" width="500" height="14" rx="4" class="bar-track"/>
+    <rect x="200" y="8" width="0" height="14" rx="4" class="bar-fill fill-gd"/>
+    <text x="715" y="20" class="text-percent">90%</text>
+  </g>
+</svg>
