@@ -1,257 +1,209 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 130" width="800" height="130">
 <defs>
   <style>
-    @keyframes march    { from{transform:translateX(-80px)} to{transform:translateX(880px)} }
-    @keyframes f1       { 0%,49%{opacity:1} 50%,100%{opacity:0} }
-    @keyframes f2       { 0%,49%{opacity:0} 50%,100%{opacity:1} }
-    @keyframes blink    { 0%,49%{opacity:1} 50%,100%{opacity:0} }
-    @keyframes twinkle  { 0%,100%{opacity:0.08} 50%{opacity:1} }
-    @keyframes floatup  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
-    @keyframes floatup2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
-    @keyframes scanline { 0%{transform:translateY(-4px);opacity:0.06} 100%{transform:translateY(134px);opacity:0} }
-    @keyframes glow     { 0%,100%{opacity:0.35} 50%{opacity:0.9} }
-    .char  { animation: march 7s linear infinite; }
-    .l1    { animation: f1 0.34s steps(1,end) infinite; }
-    .l2    { animation: f2 0.34s steps(1,end) infinite; }
-    .cur   { animation: blink 1s steps(1,end) infinite; }
-    .sc    { animation: scanline 5s linear infinite; }
-    .sym1  { animation: floatup  3.2s ease-in-out infinite; }
-    .sym2  { animation: floatup  4.1s ease-in-out infinite 0.7s; }
-    .sym3  { animation: floatup2 2.8s ease-in-out infinite 1.4s; }
-    .sym4  { animation: floatup  3.6s ease-in-out infinite 0.3s; }
-    .sym5  { animation: floatup2 4.4s ease-in-out infinite 1.9s; }
-    .sym6  { animation: floatup  3.0s ease-in-out infinite 2.2s; }
-    .gl    { animation: glow 2.8s ease-in-out infinite; }
-    .tw1   { animation: twinkle 1.8s ease-in-out infinite; }
-    .tw2   { animation: twinkle 2.5s ease-in-out infinite 0.6s; }
-    .tw3   { animation: twinkle 1.4s ease-in-out infinite 1.2s; }
-    .tw4   { animation: twinkle 3.1s ease-in-out infinite 0.9s; }
-    .tw5   { animation: twinkle 2.0s ease-in-out infinite 1.7s; }
-    .tw6   { animation: twinkle 1.6s ease-in-out infinite 0.4s; }
-    .tw7   { animation: twinkle 2.9s ease-in-out infinite 2.1s; }
-    .tw8   { animation: twinkle 1.3s ease-in-out infinite 0.1s; }
+    @keyframes f1    { 0%,49%{opacity:1}  50%,100%{opacity:0} }
+    @keyframes f2    { 0%,49%{opacity:0}  50%,100%{opacity:1} }
+    @keyframes blink { 0%,49%{opacity:1}  50%,100%{opacity:0} }
+    @keyframes glow  { 0%,100%{opacity:0.3} 50%{opacity:1} }
+    @keyframes twink { 0%,100%{opacity:0.06} 50%{opacity:0.95} }
+    @keyframes drift { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+    @keyframes scan  { 0%{transform:translateY(0);opacity:0.05} 100%{transform:translateY(130px);opacity:0} }
+    @keyframes ground{ from{transform:translateX(0)} to{transform:translateX(-16px)} }
+    .l1  { animation: f1    0.38s steps(1,end) infinite; }
+    .l2  { animation: f2    0.38s steps(1,end) infinite; }
+    .gl  { animation: glow  1.6s  ease-in-out infinite; }
+    .cur { animation: blink 1s    steps(1,end) infinite; }
+    .sc  { animation: scan  5s    linear infinite; }
+    .s1  { animation: drift 3.1s  ease-in-out infinite; }
+    .s2  { animation: drift 4.0s  ease-in-out infinite 0.6s; }
+    .s3  { animation: drift 2.7s  ease-in-out infinite 1.3s; }
+    .s4  { animation: drift 3.5s  ease-in-out infinite 0.2s; }
+    .s5  { animation: drift 4.2s  ease-in-out infinite 1.8s; }
+    .tw1 { animation: twink 1.7s  ease-in-out infinite; }
+    .tw2 { animation: twink 2.4s  ease-in-out infinite 0.5s; }
+    .tw3 { animation: twink 1.3s  ease-in-out infinite 1.1s; }
+    .tw4 { animation: twink 3.0s  ease-in-out infinite 0.8s; }
+    .tw5 { animation: twink 1.9s  ease-in-out infinite 1.6s; }
+    .tw6 { animation: twink 2.2s  ease-in-out infinite 0.3s; }
+    .gr  { animation: ground 0.5s linear infinite; }
   </style>
 </defs>
 
-<!-- Background -->
+<!-- BG -->
 <rect width="800" height="130" fill="#0d1117"/>
-
-<!-- Scanline sweep -->
-<rect width="800" height="3" fill="#58a6ff" class="sc"/>
+<!-- Scan line -->
+<rect width="800" height="3" fill="#4493f8" opacity="0.06" class="sc"/>
 
 <!-- Stars -->
-<rect x="22"  y="8"  width="2" height="2" fill="#e6edf3" class="tw1"/>
-<rect x="80"  y="18" width="2" height="2" fill="#e6edf3" class="tw2"/>
-<rect x="145" y="6"  width="2" height="2" fill="#e6edf3" class="tw3"/>
-<rect x="210" y="20" width="2" height="2" fill="#e6edf3" class="tw4"/>
-<rect x="310" y="11" width="2" height="2" fill="#e6edf3" class="tw5"/>
-<rect x="450" y="7"  width="2" height="2" fill="#e6edf3" class="tw6"/>
-<rect x="560" y="19" width="2" height="2" fill="#e6edf3" class="tw7"/>
-<rect x="670" y="9"  width="2" height="2" fill="#e6edf3" class="tw8"/>
-<rect x="740" y="15" width="2" height="2" fill="#e6edf3" class="tw1"/>
-<rect x="500" y="23" width="2" height="2" fill="#e6edf3" class="tw3"/>
-<rect x="380" y="5"  width="2" height="2" fill="#e6edf3" class="tw5"/>
-<rect x="610" y="13" width="2" height="2" fill="#e6edf3" class="tw2"/>
+<rect x="290" y="8"  width="2" height="2" fill="#c9d1d9" class="tw1"/>
+<rect x="360" y="15" width="2" height="2" fill="#c9d1d9" class="tw2"/>
+<rect x="430" y="6"  width="2" height="2" fill="#c9d1d9" class="tw3"/>
+<rect x="510" y="20" width="2" height="2" fill="#c9d1d9" class="tw4"/>
+<rect x="590" y="10" width="2" height="2" fill="#c9d1d9" class="tw5"/>
+<rect x="660" y="17" width="2" height="2" fill="#c9d1d9" class="tw6"/>
+<rect x="730" y="7"  width="2" height="2" fill="#c9d1d9" class="tw1"/>
+<rect x="760" y="22" width="2" height="2" fill="#c9d1d9" class="tw3"/>
+<rect x="330" y="25" width="2" height="2" fill="#c9d1d9" class="tw5"/>
+<rect x="480" y="13" width="2" height="2" fill="#c9d1d9" class="tw2"/>
 
-<!-- Floating code symbols (generic, timeless) -->
-<text x="55"  y="45" font-family="monospace" font-size="13" fill="#58a6ff" opacity="0.5" class="sym1">&lt;/&gt;</text>
-<text x="155" y="38" font-family="monospace" font-size="12" fill="#3fb950" opacity="0.5" class="sym2">{ }</text>
-<text x="255" y="50" font-family="monospace" font-size="11" fill="#e6a800" opacity="0.45" class="sym3">λ</text>
-<text x="530" y="40" font-family="monospace" font-size="12" fill="#58a6ff" opacity="0.45" class="sym4">//</text>
-<text x="640" y="48" font-family="monospace" font-size="11" fill="#3fb950" opacity="0.5" class="sym5">01</text>
-<text x="720" y="36" font-family="monospace" font-size="12" fill="#bc8cff" opacity="0.45" class="sym6">::</text>
+<!-- Divider line between characters and title -->
+<line x1="260" y1="25" x2="260" y2="105" stroke="#21262d" stroke-width="1"/>
 
-<!-- Center title -->
-<text x="400" y="60"
-      font-family="'Courier New',Courier,monospace"
-      font-size="32" font-weight="bold"
-      fill="#e6edf3" text-anchor="middle" letter-spacing="10">TIRUNARA</text>
+<!-- ====================================================== -->
+<!--  SHIVA: fixed at x=30, y=108. Scale 6px per pixel.    -->
+<!--  Character: 5 cols x 10 rows = 30px x 60px            -->
+<!-- ====================================================== -->
+<g transform="translate(30,108)">
+  <!-- HEAD (skin: #ffb347, bright so visible on dark BG) -->
+  <!-- row 0: cols 1-3 (skip 0,4) -->
+  <rect x="6"  y="-60" width="18" height="6" fill="#ffb347"/>
+  <!-- row 1: full 0-4 -->
+  <rect x="0"  y="-54" width="30" height="6" fill="#ffb347"/>
+  <!-- row 2: full, with eyes punched out -->
+  <rect x="0"  y="-48" width="30" height="6" fill="#ffb347"/>
+  <rect x="3"  y="-48" width="6"  height="6" fill="#161b22"/>
+  <rect x="21" y="-48" width="6"  height="6" fill="#161b22"/>
+  <!-- row 3: cols 1-3 chin -->
+  <rect x="6"  y="-42" width="18" height="6" fill="#ffb347"/>
 
-<!-- Subtitle -->
-<text x="400" y="82"
-      font-family="monospace" font-size="11"
-      fill="#8b949e" text-anchor="middle"
-      letter-spacing="2">builder · systems · ai</text>
+  <!-- SHIRT (bright blue #4493f8) -->
+  <!-- row 4: full (arms) -->
+  <rect x="0"  y="-36" width="30" height="6" fill="#4493f8"/>
+  <!-- row 5: full torso -->
+  <rect x="0"  y="-30" width="30" height="6" fill="#4493f8"/>
+  <!-- row 6: cols 1-3 lower torso -->
+  <rect x="6"  y="-24" width="18" height="6" fill="#4493f8"/>
 
-<!-- Ground line -->
-<line x1="0" y1="108" x2="800" y2="108" stroke="#21262d" stroke-width="1"/>
-<!-- Pixel ground tiles -->
-<rect x="0"   y="109" width="800" height="3" fill="#161b22"/>
-<rect x="0"   y="109" width="3" height="3" fill="#30363d"/>
-<rect x="8"   y="109" width="3" height="3" fill="#30363d"/>
-<rect x="16"  y="109" width="3" height="3" fill="#30363d"/>
-<rect x="24"  y="109" width="3" height="3" fill="#30363d"/>
-<rect x="32"  y="109" width="3" height="3" fill="#30363d"/>
-<rect x="40"  y="109" width="3" height="3" fill="#30363d"/>
-<rect x="48"  y="109" width="3" height="3" fill="#30363d"/>
-<rect x="56"  y="109" width="3" height="3" fill="#30363d"/>
-<rect x="64"  y="109" width="3" height="3" fill="#30363d"/>
-<rect x="72"  y="109" width="3" height="3" fill="#30363d"/>
-<rect x="80"  y="109" width="3" height="3" fill="#30363d"/>
-<rect x="88"  y="109" width="3" height="3" fill="#30363d"/>
-<rect x="96"  y="109" width="3" height="3" fill="#30363d"/>
-<rect x="104" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="112" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="120" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="128" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="136" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="144" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="152" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="160" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="168" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="176" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="184" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="192" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="200" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="208" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="216" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="224" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="232" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="240" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="248" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="256" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="264" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="272" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="280" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="288" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="296" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="304" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="312" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="320" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="328" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="336" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="344" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="352" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="360" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="368" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="376" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="384" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="392" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="400" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="408" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="416" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="424" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="432" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="440" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="448" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="456" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="464" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="472" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="480" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="488" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="496" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="504" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="512" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="520" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="528" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="536" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="544" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="552" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="560" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="568" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="576" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="584" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="592" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="600" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="608" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="616" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="624" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="632" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="640" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="648" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="656" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="664" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="672" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="680" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="688" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="696" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="704" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="712" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="720" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="728" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="736" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="744" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="752" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="760" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="768" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="776" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="784" y="109" width="3" height="3" fill="#30363d"/>
-<rect x="792" y="109" width="3" height="3" fill="#30363d"/>
+  <!-- WAIST (#484f58) -->
+  <rect x="6"  y="-18" width="18" height="6" fill="#484f58"/>
 
-<!-- ========================================= -->
-<!-- CHARACTERS: Shiva + Integrity companion   -->
-<!-- Both march together across the screen     -->
-<!-- ========================================= -->
-<g class="char" transform="translate(0,108)">
-
-  <!-- == SHIVA (main character, blue shirt) == -->
-  <!-- Head: skin #f0c27f -->
-  <rect x="4"  y="-40" width="16" height="4" fill="#f0c27f"/>
-  <rect x="0"  y="-36" width="24" height="4" fill="#f0c27f"/>
-  <rect x="0"  y="-32" width="24" height="4" fill="#f0c27f"/>
-  <!-- Eyes -->
-  <rect x="4"  y="-32" width="4"  height="4" fill="#1c1c1c"/>
-  <rect x="16" y="-32" width="4"  height="4" fill="#1c1c1c"/>
-  <!-- Chin -->
-  <rect x="4"  y="-28" width="16" height="4" fill="#f0c27f"/>
-  <!-- Shirt: blue #4493f8 -->
-  <rect x="0"  y="-24" width="24" height="4" fill="#4493f8"/>
-  <rect x="0"  y="-20" width="24" height="4" fill="#4493f8"/>
-  <rect x="4"  y="-16" width="16" height="4" fill="#4493f8"/>
-  <!-- Waist -->
-  <rect x="4"  y="-12" width="16" height="4" fill="#30363d"/>
-  <!-- Legs frame 1 -->
+  <!-- LEGS - frame 1 (left foot forward) -->
   <g class="l1">
-    <rect x="4"  y="-8" width="4" height="4" fill="#30363d"/>
-    <rect x="16" y="-8" width="4" height="4" fill="#30363d"/>
-    <rect x="0"  y="-4" width="4" height="4" fill="#21262d"/>
-    <rect x="16" y="-4" width="8" height="4" fill="#21262d"/>
+    <!-- upper legs -->
+    <rect x="6"  y="-12" width="6"  height="6" fill="#484f58"/>
+    <rect x="18" y="-12" width="6"  height="6" fill="#484f58"/>
+    <!-- feet: left fwd, right back -->
+    <rect x="0"  y="-6"  width="6"  height="6" fill="#30363d"/>
+    <rect x="18" y="-6"  width="12" height="6" fill="#30363d"/>
   </g>
-  <!-- Legs frame 2 -->
+  <!-- LEGS - frame 2 (right foot forward) -->
   <g class="l2">
-    <rect x="4"  y="-8" width="4" height="4" fill="#30363d"/>
-    <rect x="16" y="-8" width="4" height="4" fill="#30363d"/>
-    <rect x="0"  y="-4" width="8" height="4" fill="#21262d"/>
-    <rect x="20" y="-4" width="4" height="4" fill="#21262d"/>
+    <rect x="6"  y="-12" width="6"  height="6" fill="#484f58"/>
+    <rect x="18" y="-12" width="6"  height="6" fill="#484f58"/>
+    <rect x="0"  y="-6"  width="12" height="6" fill="#30363d"/>
+    <rect x="24" y="-6"  width="6"  height="6" fill="#30363d"/>
   </g>
+</g>
 
-  <!-- == INTEGRITY (robot companion, follows behind) == -->
-  <!-- Offset: x+32 so it walks slightly behind Shiva -->
-  <!-- Label above robot -->
-  <text x="42" y="-32" font-family="monospace" font-size="6" fill="#3fb950" text-anchor="middle" opacity="0.8">INTEGRITY</text>
+<!-- ====================================================== -->
+<!--  INTEGRITY ROBOT: fixed at x=130, y=108.              -->
+<!--  Scale 5px per pixel. Smaller companion.              -->
+<!-- ====================================================== -->
+<!-- Label -->
+<text x="153" y="43" font-family="monospace" font-size="7" fill="#3fb950" text-anchor="middle" opacity="0.85">INTEGRITY</text>
+<g transform="translate(130,108)">
   <!-- Antenna -->
-  <rect x="42" y="-30" width="2"  height="4"  fill="#3fb950"/>
-  <rect x="40" y="-34" width="6"  height="3"  fill="#3fb950" opacity="0.7"/>
-  <!-- Robot head: square, green tint -->
-  <rect x="36" y="-26" width="14" height="10" fill="#21262d" rx="1"/>
-  <!-- Eyes: glowing green -->
-  <rect x="39" y="-23" width="3"  height="3"  fill="#3fb950" class="gl"/>
-  <rect x="46" y="-23" width="3"  height="3"  fill="#3fb950" class="gl"/>
-  <!-- Robot body -->
-  <rect x="38" y="-16" width="10" height="8"  fill="#161b22"/>
-  <rect x="36" y="-14" width="3"  height="6"  fill="#21262d"/>
-  <rect x="47" y="-14" width="3"  height="6"  fill="#21262d"/>
-  <!-- Robot legs frame 1 -->
-  <g class="l2">
-    <rect x="39" y="-8"  width="3"  height="4"  fill="#30363d"/>
-    <rect x="45" y="-8"  width="3"  height="4"  fill="#30363d"/>
-    <rect x="38" y="-4"  width="4"  height="4"  fill="#21262d"/>
-    <rect x="45" y="-4"  width="4"  height="4"  fill="#21262d"/>
-  </g>
-  <!-- Robot legs frame 2 -->
-  <g class="l1">
-    <rect x="39" y="-8"  width="3"  height="4"  fill="#30363d"/>
-    <rect x="45" y="-8"  width="3"  height="4"  fill="#30363d"/>
-    <rect x="37" y="-4"  width="4"  height="4"  fill="#21262d"/>
-    <rect x="46" y="-4"  width="4"  height="4"  fill="#21262d"/>
-  </g>
+  <rect x="21" y="-57" width="4"  height="6"  fill="#3fb950"/>
+  <rect x="17" y="-62" width="12" height="5"  fill="#3fb950" opacity="0.7"/>
 
+  <!-- ROBOT HEAD (square, dark with bright eyes) -->
+  <rect x="10" y="-51" width="35" height="5"  fill="#21262d"/>
+  <rect x="10" y="-46" width="35" height="5"  fill="#21262d"/>
+  <!-- glowing eyes -->
+  <rect x="14" y="-46" width="8"  height="5"  fill="#3fb950" class="gl"/>
+  <rect x="33" y="-46" width="8"  height="5"  fill="#3fb950" class="gl"/>
+  <rect x="10" y="-41" width="35" height="5"  fill="#21262d"/>
+
+  <!-- ROBOT BODY -->
+  <rect x="12" y="-36" width="31" height="5"  fill="#161b22"/>
+  <rect x="10" y="-34" width="5"  height="9"  fill="#21262d"/>
+  <rect x="40" y="-34" width="5"  height="9"  fill="#21262d"/>
+  <rect x="12" y="-31" width="31" height="5"  fill="#161b22"/>
+
+  <!-- ROBOT WAIST -->
+  <rect x="14" y="-21" width="27" height="4"  fill="#21262d"/>
+
+  <!-- ROBOT LEGS frame 1 -->
+  <g class="l2">
+    <rect x="14" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="33" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="10" y="-12" width="8"  height="5"  fill="#21262d"/>
+    <rect x="33" y="-12" width="12" height="5"  fill="#21262d"/>
+  </g>
+  <!-- ROBOT LEGS frame 2 -->
+  <g class="l1">
+    <rect x="14" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="33" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="10" y="-12" width="12" height="5"  fill="#21262d"/>
+    <rect x="37" y="-12" width="8"  height="5"  fill="#21262d"/>
+  </g>
 </g>
 <!-- ======== END CHARACTERS ======== -->
 
+<!-- Floating code symbols (right side) -->
+<text x="330" y="48" font-family="monospace" font-size="14" fill="#4493f8" opacity="0.55" class="s1">&lt;/&gt;</text>
+<text x="420" y="38" font-family="monospace" font-size="13" fill="#3fb950" opacity="0.55" class="s2">{ }</text>
+<text x="510" y="52" font-family="monospace" font-size="15" fill="#e6a800" opacity="0.5"  class="s3">λ</text>
+<text x="590" y="40" font-family="monospace" font-size="13" fill="#4493f8" opacity="0.5"  class="s4">//</text>
+<text x="660" y="50" font-family="monospace" font-size="12" fill="#bc8cff" opacity="0.55" class="s5">::</text>
+<text x="730" y="42" font-family="monospace" font-size="13" fill="#3fb950" opacity="0.45" class="s1">01</text>
+
+<!-- Title -->
+<text x="530" y="75"
+      font-family="'Courier New',Courier,monospace"
+      font-size="30" font-weight="bold"
+      fill="#e6edf3" text-anchor="middle" letter-spacing="8">TIRUNARA</text>
+
+<!-- Subtitle -->
+<text x="530" y="95"
+      font-family="monospace" font-size="10"
+      fill="#8b949e" text-anchor="middle" letter-spacing="2">builder · systems · ai</text>
+
+<!-- Ground -->
+<line x1="0" y1="108" x2="800" y2="108" stroke="#21262d" stroke-width="1"/>
+
+<!-- Scrolling ground tiles under character area (creates walking illusion) -->
+<g class="gr">
+  <rect x="0"   y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="8"   y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="16"  y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="24"  y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="32"  y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="40"  y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="48"  y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="56"  y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="64"  y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="72"  y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="80"  y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="88"  y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="96"  y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="104" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="112" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="120" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="128" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="136" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="144" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="152" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="160" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="168" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="176" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="184" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="192" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="200" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="208" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="216" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="224" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="232" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="240" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="248" y="109" width="4" height="3" fill="#30363d"/>
+  <rect x="256" y="109" width="4" height="3" fill="#30363d"/>
+</g>
+<!-- Static ground (right half) -->
+<rect x="260" y="109" width="540" height="3" fill="#161b22"/>
+
 <!-- Bottom bar -->
 <rect x="0" y="118" width="800" height="12" fill="#161b22"/>
-<text x="8" y="128" font-family="monospace" font-size="9" fill="#8b949e">tirunara@github:~</text>
-<text x="110" y="128" font-family="monospace" font-size="9" fill="#3fb950"> &#x25B6;</text>
-<rect x="122" y="119" width="6" height="9" fill="#3fb950" class="cur"/>
+<text x="8" y="128" font-family="monospace" font-size="9" fill="#8b949e">tirunara@github</text>
+<text x="104" y="128" font-family="monospace" font-size="9" fill="#3fb950"> ▶</text>
+<rect x="118" y="119" width="6" height="9" fill="#3fb950" class="cur"/>
 </svg>
