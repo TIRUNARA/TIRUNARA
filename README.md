@@ -1,6 +1,10 @@
 # Shiva (TIRUNARA)
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/TIRUNARA/TIRUNARA/main/pixel_banner.svg" alt="pixel art banner" width="800"/>
+</p>
+
+<p align="center">
   <a href="https://github.com/TIRUNARA">
     <img src="https://readme-typing-svg.demolab.com?font=Outfit&size=22&duration=3000&pause=1000&color=47A1F2&center=true&vCenter=true&width=500&lines=Computer+Science+Student;Building+Agentic+Systems;Workflow+Automation+%26+DAG+Engines;Low-Level+Linux+%26+Systems+Programming" alt="Typing SVG" />
   </a>
