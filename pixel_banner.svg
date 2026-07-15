@@ -4,18 +4,18 @@
   <style>
     @keyframes f1{0%,49%{opacity:1}50%,100%{opacity:0}}
     @keyframes f2{0%,49%{opacity:0}50%,100%{opacity:1}}
-    @keyframes gla{0%,100%{opacity:.28}50%{opacity:1}}
-    @keyframes glb{0%,100%{opacity:.22}50%{opacity:.95}}
+    @keyframes gla{0%,100%{opacity:.3}50%{opacity:1}}
+    @keyframes glb{0%,100%{opacity:.25}50%{opacity:.95}}
     @keyframes glc{0%,100%{opacity:.2}50%{opacity:1}}
     @keyframes bc{0%,49%{opacity:1}50%,100%{opacity:0}}
     @keyframes tw{0%,100%{opacity:.05}50%{opacity:.9}}
     @keyframes sc{0%{transform:translateY(0);opacity:.05}100%{transform:translateY(130px);opacity:0}}
     @keyframes gr{from{transform:translateX(0)}to{transform:translateX(-16px)}}
-    .a1{animation:f1 .4s steps(1,end) infinite}
-    .a2{animation:f2 .4s steps(1,end) infinite}
-    .ea{animation:gla 1.7s ease-in-out infinite}
-    .eb{animation:glb 1.4s ease-in-out infinite .3s}
-    .ec{animation:glc 1.6s ease-in-out infinite .1s}
+    .l1{animation:f1 .38s steps(1,end) infinite}
+    .l2{animation:f2 .38s steps(1,end) infinite}
+    .ea{animation:gla 1.6s ease-in-out infinite}
+    .eb{animation:glb 1.5s ease-in-out infinite .3s}
+    .ec{animation:glc 1.7s ease-in-out infinite .1s}
     .sc{animation:sc 5s linear infinite}
     .bc{animation:bc 1s steps(1,end) infinite}
     .gr{animation:gr .55s linear infinite}
@@ -29,140 +29,140 @@
 <rect width="800" height="130" fill="#0d1117"/>
 <rect width="800" height="2" fill="#4493f8" opacity=".06" class="sc"/>
 
-<!-- dividers -->
+<!-- Dividers -->
 <line x1="270" y1="18" x2="270" y2="106" stroke="#21262d" stroke-width="1"/>
-<line x1="540" y1="18" x2="540" y2="106" stroke="#21262d" stroke-width="1"/>
+<line x1="530" y1="18" x2="530" y2="106" stroke="#21262d" stroke-width="1"/>
 
-<!-- center stars -->
-<rect x="308" y="9"  width="2" height="2" fill="#c9d1d9" class="t1"/>
-<rect x="375" y="18" width="2" height="2" fill="#c9d1d9" class="t2"/>
-<rect x="425" y="7"  width="2" height="2" fill="#c9d1d9" class="t3"/>
-<rect x="490" y="22" width="2" height="2" fill="#c9d1d9" class="t4"/>
-<rect x="345" y="27" width="2" height="2" fill="#c9d1d9" class="t2"/>
-<rect x="460" y="14" width="2" height="2" fill="#c9d1d9" class="t1"/>
+<!-- Stars (Center) -->
+<rect x="300" y="8"  width="2" height="2" fill="#c9d1d9" class="t1"/>
+<rect x="370" y="16" width="2" height="2" fill="#c9d1d9" class="t2"/>
+<rect x="420" y="6"  width="2" height="2" fill="#c9d1d9" class="t3"/>
+<rect x="480" y="20" width="2" height="2" fill="#c9d1d9" class="t4"/>
+<rect x="340" y="24" width="2" height="2" fill="#c9d1d9" class="t2"/>
+<rect x="450" y="12" width="2" height="2" fill="#c9d1d9" class="t1"/>
 
-<!-- ===================== LEFT: INTEGRIS (blue) ===================== -->
-<text x="42" y="27" font-family="monospace" font-size="7" fill="#4493f8" text-anchor="middle" letter-spacing="1">INTEGRIS</text>
-<g transform="translate(15,108)">
-  <rect x="11" y="-73" width="5"  height="9"  fill="#4493f8" opacity=".8"/>
-  <rect x="6"  y="-68" width="15" height="4"  fill="#4493f8" opacity=".5"/>
-  <rect x="0"  y="-64" width="30" height="5"  fill="#4493f8"/>
-  <rect x="0"  y="-59" width="5"  height="5"  fill="#4493f8"/>
-  <rect x="5"  y="-59" width="20" height="5"  fill="#161b22"/>
-  <rect x="25" y="-59" width="5"  height="5"  fill="#4493f8"/>
-  <rect x="0"  y="-54" width="5"  height="5"  fill="#4493f8"/>
-  <rect x="5"  y="-54" width="7"  height="5"  fill="#58d4ff" class="ea"/>
-  <rect x="12" y="-54" width="6"  height="5"  fill="#161b22"/>
-  <rect x="18" y="-54" width="7"  height="5"  fill="#58d4ff" class="ea"/>
-  <rect x="25" y="-54" width="5"  height="5"  fill="#4493f8"/>
-  <rect x="0"  y="-49" width="30" height="5"  fill="#4493f8"/>
-  <rect x="0"  y="-44" width="30" height="5"  fill="#4493f8"/>
-  <rect x="0"  y="-39" width="5"  height="10" fill="#4493f8"/>
-  <rect x="5"  y="-39" width="20" height="10" fill="#161b22"/>
-  <rect x="25" y="-39" width="5"  height="10" fill="#4493f8"/>
-  <rect x="12" y="-37" width="6"  height="6"  fill="#3fb950" class="ea"/>
-  <rect x="0"  y="-29" width="30" height="5"  fill="#4493f8"/>
-  <rect x="5"  y="-24" width="20" height="5"  fill="#1158c7"/>
-  <g class="a1">
-    <rect x="5"  y="-19" width="6"  height="5"  fill="#1158c7"/>
-    <rect x="19" y="-19" width="6"  height="5"  fill="#1158c7"/>
-    <rect x="0"  y="-14" width="6"  height="5"  fill="#0d3a8a"/>
-    <rect x="19" y="-14" width="11" height="5"  fill="#0d3a8a"/>
+<!-- ===================== LEFT: BOT 1 — INTEGRIS (Blue companion style) ===================== -->
+<text x="62" y="27" font-family="monospace" font-size="7" fill="#4493f8" text-anchor="middle" letter-spacing="1">INTEGRIS</text>
+<g transform="translate(40,108)">
+  <!-- Antenna -->
+  <rect x="21" y="-57" width="4"  height="6"  fill="#4493f8"/>
+  <rect x="17" y="-62" width="12" height="5"  fill="#4493f8" opacity="0.6"/>
+  <!-- Head -->
+  <rect x="10" y="-51" width="35" height="5"  fill="#21262d"/>
+  <rect x="10" y="-46" width="35" height="5"  fill="#21262d"/>
+  <!-- glowing blue eyes -->
+  <rect x="14" y="-46" width="8"  height="5"  fill="#58d4ff" class="ea"/>
+  <rect x="33" y="-46" width="8"  height="5"  fill="#58d4ff" class="ea"/>
+  <rect x="10" y="-41" width="35" height="5"  fill="#21262d"/>
+  <!-- Body -->
+  <rect x="12" y="-36" width="31" height="5"  fill="#161b22"/>
+  <rect x="10" y="-34" width="5"  height="9"  fill="#21262d"/>
+  <rect x="40" y="-34" width="5"  height="9"  fill="#21262d"/>
+  <rect x="12" y="-31" width="31" height="5"  fill="#161b22"/>
+  <!-- Chest indicator (blue glow) -->
+  <rect x="24" y="-33" width="6"  height="4"  fill="#58d4ff" class="ea"/>
+  <!-- Waist -->
+  <rect x="14" y="-21" width="27" height="4"  fill="#1158c7"/>
+  <!-- Legs frame 1 -->
+  <g class="l2">
+    <rect x="14" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="33" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="10" y="-12" width="8"  height="5"  fill="#21262d"/>
+    <rect x="33" y="-12" width="12" height="5"  fill="#21262d"/>
   </g>
-  <g class="a2">
-    <rect x="5"  y="-19" width="6"  height="5"  fill="#1158c7"/>
-    <rect x="19" y="-19" width="6"  height="5"  fill="#1158c7"/>
-    <rect x="0"  y="-14" width="11" height="5"  fill="#0d3a8a"/>
-    <rect x="24" y="-14" width="6"  height="5"  fill="#0d3a8a"/>
+  <!-- Legs frame 2 -->
+  <g class="l1">
+    <rect x="14" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="33" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="10" y="-12" width="12" height="5"  fill="#21262d"/>
+    <rect x="37" y="-12" width="8"  height="5"  fill="#21262d"/>
   </g>
 </g>
 
-<!-- ===================== LEFT: JULES (amber) ===================== -->
+<!-- ===================== LEFT: BOT 2 — JULES (Amber companion style) ===================== -->
 <text x="187" y="27" font-family="monospace" font-size="7" fill="#e6a800" text-anchor="middle" letter-spacing="1">JULES</text>
-<g transform="translate(160,108)">
-  <rect x="11" y="-70" width="5"  height="7"  fill="#e6a800" opacity=".8"/>
-  <rect x="5"  y="-64" width="20" height="5"  fill="#e6a800"/>
-  <rect x="0"  y="-59" width="30" height="5"  fill="#e6a800"/>
-  <rect x="0"  y="-54" width="5"  height="5"  fill="#e6a800"/>
-  <rect x="5"  y="-54" width="7"  height="5"  fill="#ffcc00" class="eb"/>
-  <rect x="12" y="-54" width="6"  height="5"  fill="#161b22"/>
-  <rect x="18" y="-54" width="7"  height="5"  fill="#ffcc00" class="eb"/>
-  <rect x="25" y="-54" width="5"  height="5"  fill="#e6a800"/>
-  <rect x="5"  y="-49" width="20" height="5"  fill="#e6a800"/>
-  <rect x="0"  y="-44" width="30" height="5"  fill="#c8870a"/>
-  <rect x="0"  y="-39" width="5"  height="10" fill="#c8870a"/>
-  <rect x="5"  y="-39" width="20" height="10" fill="#161b22"/>
-  <rect x="25" y="-39" width="5"  height="10" fill="#c8870a"/>
-  <rect x="9"  y="-37" width="4"  height="2"  fill="#e6a800"/>
-  <rect x="13" y="-35" width="4"  height="2"  fill="#e6a800"/>
-  <rect x="9"  y="-33" width="4"  height="2"  fill="#e6a800"/>
-  <rect x="0"  y="-29" width="30" height="5"  fill="#c8870a"/>
-  <rect x="5"  y="-24" width="20" height="5"  fill="#a06a08"/>
-  <g class="a2">
-    <rect x="5"  y="-19" width="6"  height="5"  fill="#a06a08"/>
-    <rect x="19" y="-19" width="6"  height="5"  fill="#a06a08"/>
-    <rect x="0"  y="-14" width="6"  height="5"  fill="#7a4f06"/>
-    <rect x="19" y="-14" width="11" height="5"  fill="#7a4f06"/>
+<g transform="translate(165,108)">
+  <!-- Antenna -->
+  <rect x="21" y="-57" width="4"  height="6"  fill="#e6a800"/>
+  <rect x="17" y="-62" width="12" height="5"  fill="#e6a800" opacity="0.6"/>
+  <!-- Head -->
+  <rect x="10" y="-51" width="35" height="5"  fill="#21262d"/>
+  <rect x="10" y="-46" width="35" height="5"  fill="#21262d"/>
+  <!-- glowing amber eyes -->
+  <rect x="14" y="-46" width="8"  height="5"  fill="#ffcc00" class="eb"/>
+  <rect x="33" y="-46" width="8"  height="5"  fill="#ffcc00" class="eb"/>
+  <rect x="10" y="-41" width="35" height="5"  fill="#21262d"/>
+  <!-- Body -->
+  <rect x="12" y="-36" width="31" height="5"  fill="#161b22"/>
+  <rect x="10" y="-34" width="5"  height="9"  fill="#21262d"/>
+  <rect x="40" y="-34" width="5"  height="9"  fill="#21262d"/>
+  <rect x="12" y="-31" width="31" height="5"  fill="#161b22"/>
+  <!-- Chest indicator (amber glow) -->
+  <rect x="24" y="-33" width="6"  height="4"  fill="#ffcc00" class="eb"/>
+  <!-- Waist -->
+  <rect x="14" y="-21" width="27" height="4"  fill="#a06a08"/>
+  <!-- Legs frame 1 (alternate phase to Integris) -->
+  <g class="l1">
+    <rect x="14" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="33" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="10" y="-12" width="8"  height="5"  fill="#21262d"/>
+    <rect x="33" y="-12" width="12" height="5"  fill="#21262d"/>
   </g>
-  <g class="a1">
-    <rect x="5"  y="-19" width="6"  height="5"  fill="#a06a08"/>
-    <rect x="19" y="-19" width="6"  height="5"  fill="#a06a08"/>
-    <rect x="0"  y="-14" width="11" height="5"  fill="#7a4f06"/>
-    <rect x="24" y="-14" width="6"  height="5"  fill="#7a4f06"/>
+  <!-- Legs frame 2 -->
+  <g class="l2">
+    <rect x="14" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="33" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="10" y="-12" width="12" height="5"  fill="#21262d"/>
+    <rect x="37" y="-12" width="8"  height="5"  fill="#21262d"/>
   </g>
 </g>
 
 <!-- ==================== CENTER: Title ======================== -->
-<text x="405" y="63" font-family="'Courier New',monospace" font-size="28" font-weight="bold"
+<text x="400" y="63" font-family="'Courier New',monospace" font-size="26" font-weight="bold"
       fill="#e6edf3" text-anchor="middle" letter-spacing="7">TIRUNARA</text>
-<text x="405" y="82" font-family="monospace" font-size="10" fill="#8b949e"
-      text-anchor="middle" letter-spacing="2">builder · systems · ai</text>
+<text x="400" y="82" font-family="monospace" font-size="9" fill="#8b949e"
+      text-anchor="middle" letter-spacing="1.5">integris · jules · integrity</text>
 
-<!-- ==================== RIGHT: INTEGRITY (dark/green) ========= -->
-<text x="670" y="27" font-family="monospace" font-size="7" fill="#3fb950" text-anchor="middle" letter-spacing="1">INTEGRITY</text>
-<g transform="translate(643,108)">
-  <!-- antenna -->
-  <rect x="11" y="-73" width="5"  height="9"  fill="#3fb950" opacity=".8"/>
-  <rect x="6"  y="-68" width="15" height="4"  fill="#3fb950" opacity=".45"/>
-  <!-- head: dark square -->
-  <rect x="0"  y="-64" width="30" height="5"  fill="#21262d"/>
-  <rect x="0"  y="-59" width="5"  height="5"  fill="#21262d"/>
-  <rect x="5"  y="-59" width="20" height="5"  fill="#161b22"/>
-  <rect x="25" y="-59" width="5"  height="5"  fill="#21262d"/>
-  <!-- green glowing eyes -->
-  <rect x="0"  y="-54" width="5"  height="5"  fill="#21262d"/>
-  <rect x="5"  y="-54" width="7"  height="5"  fill="#3fb950" class="ec"/>
-  <rect x="12" y="-54" width="6"  height="5"  fill="#161b22"/>
-  <rect x="18" y="-54" width="7"  height="5"  fill="#3fb950" class="ec"/>
-  <rect x="25" y="-54" width="5"  height="5"  fill="#21262d"/>
-  <rect x="0"  y="-49" width="30" height="5"  fill="#21262d"/>
-  <!-- body dark -->
-  <rect x="0"  y="-44" width="30" height="5"  fill="#161b22"/>
-  <rect x="0"  y="-39" width="5"  height="10" fill="#21262d"/>
-  <rect x="5"  y="-39" width="20" height="10" fill="#0d1117"/>
-  <rect x="25" y="-39" width="5"  height="10" fill="#21262d"/>
-  <!-- green chest indicator -->
-  <rect x="12" y="-37" width="6"  height="6"  fill="#3fb950" class="ec"/>
-  <rect x="0"  y="-29" width="30" height="5"  fill="#161b22"/>
-  <rect x="5"  y="-24" width="20" height="5"  fill="#21262d"/>
-  <!-- legs (opposite phase) -->
-  <g class="a2">
-    <rect x="5"  y="-19" width="6"  height="5"  fill="#21262d"/>
-    <rect x="19" y="-19" width="6"  height="5"  fill="#21262d"/>
-    <rect x="0"  y="-14" width="6"  height="5"  fill="#161b22"/>
-    <rect x="19" y="-14" width="11" height="5"  fill="#161b22"/>
+<!-- ==================== RIGHT: BOT 3 — INTEGRITY (Green original design) ==================== -->
+<text x="662" y="27" font-family="monospace" font-size="7" fill="#3fb950" text-anchor="middle" letter-spacing="1">INTEGRITY</text>
+<g transform="translate(640,108)">
+  <!-- Antenna -->
+  <rect x="21" y="-57" width="4"  height="6"  fill="#3fb950"/>
+  <rect x="17" y="-62" width="12" height="5"  fill="#3fb950" opacity="0.7"/>
+  <!-- Head -->
+  <rect x="10" y="-51" width="35" height="5"  fill="#21262d"/>
+  <rect x="10" y="-46" width="35" height="5"  fill="#21262d"/>
+  <!-- glowing green eyes -->
+  <rect x="14" y="-46" width="8"  height="5"  fill="#3fb950" class="ec"/>
+  <rect x="33" y="-46" width="8"  height="5"  fill="#3fb950" class="ec"/>
+  <rect x="10" y="-41" width="35" height="5"  fill="#21262d"/>
+  <!-- Body -->
+  <rect x="12" y="-36" width="31" height="5"  fill="#161b22"/>
+  <rect x="10" y="-34" width="5"  height="9"  fill="#21262d"/>
+  <rect x="40" y="-34" width="5"  height="9"  fill="#21262d"/>
+  <rect x="12" y="-31" width="31" height="5"  fill="#161b22"/>
+  <!-- Chest indicator (green glow) -->
+  <rect x="24" y="-33" width="6"  height="4"  fill="#3fb950" class="ec"/>
+  <!-- Waist -->
+  <rect x="14" y="-21" width="27" height="4"  fill="#21262d"/>
+  <!-- Legs frame 1 (alternate phase to Jules) -->
+  <g class="l2">
+    <rect x="14" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="33" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="10" y="-12" width="8"  height="5"  fill="#21262d"/>
+    <rect x="33" y="-12" width="12" height="5"  fill="#21262d"/>
   </g>
-  <g class="a1">
-    <rect x="5"  y="-19" width="6"  height="5"  fill="#21262d"/>
-    <rect x="19" y="-19" width="6"  height="5"  fill="#21262d"/>
-    <rect x="0"  y="-14" width="11" height="5"  fill="#161b22"/>
-    <rect x="24" y="-14" width="6"  height="5"  fill="#161b22"/>
+  <!-- Legs frame 2 -->
+  <g class="l1">
+    <rect x="14" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="33" y="-17" width="8"  height="5"  fill="#30363d"/>
+    <rect x="10" y="-12" width="12" height="5"  fill="#21262d"/>
+    <rect x="37" y="-12" width="8"  height="5"  fill="#21262d"/>
   </g>
 </g>
 
 <!-- ==================== GROUND + SCROLLING TILES ============== -->
 <line x1="0" y1="108" x2="800" y2="108" stroke="#30363d" stroke-width="1.5"/>
-<!-- Scrolling ground tiles (clipped, full width) -->
 <g clip-path="url(#gc)">
 <g class="gr">
 <rect x="0"   y="110" width="8" height="3" fill="#21262d"/>
@@ -220,7 +220,7 @@
 </g>
 </g>
 
-<!-- bottom bar -->
+<!-- Bottom bar -->
 <rect x="0" y="118" width="800" height="12" fill="#161b22"/>
 <text x="8"   y="127" font-family="monospace" font-size="8" fill="#4493f8">INTEGRIS</text>
 <text x="70"  y="127" font-family="monospace" font-size="8" fill="#8b949e"> + </text>
