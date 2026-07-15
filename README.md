@@ -1,7 +1,7 @@
 # Shiva (TIRUNARA)
 
 <p align="center">
-  <img src="pixel_banner.svg?v=3" alt="pixel art banner" width="800"/>
+  <img src="https://raw.githubusercontent.com/TIRUNARA/TIRUNARA/main/pixel_banner.svg?v=3" alt="pixel art banner" width="800"/>
 </p>
 
 <p align="center">
